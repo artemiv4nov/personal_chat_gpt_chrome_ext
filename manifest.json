@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Personal ChatGPT",
+  "version": "1.0",
+  "description": "A simple chat client to interact with ChatGPT.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon48.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "48": "icon48.png"
+  },
+  "permissions": ["activeTab", "webRequest", "storage"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  },
+  "options_page": "options.html"
+}
