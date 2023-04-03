@@ -12,6 +12,20 @@ body {
   height: 100%;
 }
 
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 8px;
+}
+
+.settings-icon {
+  width: 24px;
+  height: 24px;
+  padding: 8px;
+  cursor: pointer;
+}
+
 .chat-box {
   flex-grow: 1;
   overflow-y: auto;

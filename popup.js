@@ -1,6 +1,7 @@
 const inputField = document.getElementById("input");
 const sendButton = document.getElementById("send-button");
 const chatBox = document.getElementById("chat-box");
+const settingsIcon = document.getElementById("settings-icon");
 
 const clearButton = document.getElementById("clear-button");
 clearButton.addEventListener("click", clearChatHistory);
@@ -12,6 +13,10 @@ function clearChatHistory() {
   chatBox.innerHTML = "";
   chrome.storage.local.set({ chat_history: [] });
 }
+
+settingsIcon.addEventListener("click", () => {
+  chrome.runtime.openOptionsPage();
+});
 
 sendButton.addEventListener("click", sendMessage);
 inputField.addEventListener("keydown", event => {
